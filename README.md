@@ -6,6 +6,12 @@ Based on the work of [Tom Meagher](https://github.com/tommeagher) and their [Her
 
 [eBooks accounts](https://en.wikipedia.org/wiki/Horse_ebooks) tweet 'nonsence' content based on a Markov chain of a specific source count. This code sources all these accounts as it's contrent. An ebooks of ebooks, if you will. 
 
+## Setup
+
+Clone this repo
+
+Change the `local_settings.py` per comments
+
 ## Tech spec
 
 Using a list of the follows of the `TWEET_ACCOUNT` as the input sources, the code gets at most `PAGE_SIZE * PAGE` of tweets from each account, markov chain's them together, and tweets the result. 
