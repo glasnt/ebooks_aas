@@ -5,6 +5,7 @@ import twitter
 import markov
 from htmlentitydefs import name2codepoint as n2c
 from local_settings import *
+from secret_env import *
 
 def connect():
     api = twitter.Api(consumer_key=MY_CONSUMER_KEY,
@@ -127,7 +128,7 @@ if __name__=="__main__":
 
     
     # hard truncate if it's too long
-    if len(ebook_tweet) < 140:
+    if len(ebook_tweet) > 140:
         ebook_tweet = ebook_tweet[:110]
 
     # Do not tweet if too similar 
